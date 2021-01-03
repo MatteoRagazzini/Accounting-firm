@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14.5, 31.875" name="StudioCommercialeDataClasses">
+  <DataContextMoniker Name="/StudioCommercialeDataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="158d1ea4-229f-4215-8865-c10ff0e71dcf" absoluteBounds="9, 21.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/StudioCommercialeDataClassesDataContext/AMMINISTRATORI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="94052c06-5f71-46cb-861e-70e6daeb9fa2" absoluteBounds="9.015, 21.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="68303cd9-84c0-41a1-9b84-8653ef6ffccf" absoluteBounds="9, 18.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/StudioCommercialeDataClassesDataContext/ASSOCIAZIONE_SOCI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e9ed8912-126c-4d59-a364-31e7a693fda1" absoluteBounds="9.015, 18.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="667cdec3-8a20-4205-9cab-f2e0cea82395" absoluteBounds="9, 25.75, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/StudioCommercialeDataClassesDataContext/BILANCI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e035ac44-ab4d-4522-a16b-e2e5c4f96c8b" absoluteBounds="9.015, 26.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0d4ca4b3-a06f-42e3-b987-22bd44069a2b" absoluteBounds="0.75, 8.25, 2, 2.5401025390624987">
+      <DataClassMoniker Name="/StudioCommercialeDataClassesDataContext/CLIENTI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9ffd2f45-359c-4a68-aaf9-c8f1136c93e6" absoluteBounds="0.765, 8.71, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="07b29bc8-c452-4b65-b6b0-36287b8c7821" absoluteBounds="9.25, 8.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/StudioCommercialeDataClassesDataContext/CLIENTI_SEGUITI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d943e1f9-9540-48b1-ba27-63cb02bb4314" absoluteBounds="9.265, 8.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0a685097-3cce-4f60-89a0-0477b14d9523" absoluteBounds="9.25, 14.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/StudioCommercialeDataClassesDataContext/DATI_PIATTAFORMA_IMPRESE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f6df84a9-7897-49a7-a26e-36f3e68ff015" absoluteBounds="9.265, 15.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="77bc65ff-cb65-4455-ba60-d3c05e11ada5" absoluteBounds="6.25, 10.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/StudioCommercialeDataClassesDataContext/DATI_PIATTAFORMA_LIB_PROF" />
+      <nestedChildShapes>
+        <elementListCompartment Id="83c5c0e9-429d-4af5-ae34-88867830f607" absoluteBounds="6.265, 11.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2b5ac2ae-cff0-482d-b16c-4622a92438ca" absoluteBounds="3.5, 5.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/StudioCommercialeDataClassesDataContext/DELEGHE_ANNUE_CLIENTI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="04e2f8ba-8f81-4feb-a40a-39277aab371e" absoluteBounds="3.515, 5.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="55c7dd1d-0265-4b86-87ba-a6732471cfa6" absoluteBounds="6.25, 16.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/StudioCommercialeDataClassesDataContext/DELEGHE_ANNUE_IMPRESE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b772e554-c4a7-4f3c-b9ea-627d47a03f4b" absoluteBounds="6.265, 16.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cc26bed2-22df-462a-9abd-43c03fd7b47e" absoluteBounds="6.5, 7.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/StudioCommercialeDataClassesDataContext/DIPENDENTI_STUDIO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e3acbf40-8203-4da2-b507-44470b5fd697" absoluteBounds="6.515, 8.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7074d6a6-64bd-46ce-86d1-664c8a8704dd" absoluteBounds="6.25, 14, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/StudioCommercialeDataClassesDataContext/DIRIGENZA_DITTE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cae3192b-bdb0-4dcc-b188-a13c30b9522f" absoluteBounds="6.265, 14.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7c07da16-3295-489b-be85-b2ec4832ea7f" absoluteBounds="12.25, 21.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/StudioCommercialeDataClassesDataContext/FABBRICATI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="73430a48-b909-40ec-96bb-fef785c3cbba" absoluteBounds="12.265, 21.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1d89c745-8353-4b7d-841a-14f2c080d9a2" absoluteBounds="3.5, 14, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/StudioCommercialeDataClassesDataContext/IMPRESE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="05a5c91b-edd3-4fb6-b712-69e5318d09f6" absoluteBounds="3.515, 14.46, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6103b66b-ec7e-4ebb-8240-7293da0d52a5" absoluteBounds="9.25, 11.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/StudioCommercialeDataClassesDataContext/IMPRESE_SEGUITE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bcd5ff14-7310-4df0-9f0c-725e4ca5ed7d" absoluteBounds="9.265, 12.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5ebc9660-e373-4120-9e32-09fefb682025" absoluteBounds="3.5, 10.25, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/StudioCommercialeDataClassesDataContext/LIBERI_PROFESSIONISTI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="83267ac1-0a44-4407-9c94-ba4c71c8b87c" absoluteBounds="3.515, 10.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6aa86cb4-ed89-41bf-9871-9ee18ec2093f" absoluteBounds="3.5, 8, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/StudioCommercialeDataClassesDataContext/PIATTAFORME" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5d30b392-93ff-47d7-8096-3c188b8b5346" absoluteBounds="3.515, 8.46, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1e58390c-c15c-40c2-8bc1-d6d66870b071" absoluteBounds="3.5, 20.375, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/StudioCommercialeDataClassesDataContext/PROPRIETA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5adc4c80-a3d3-4a44-86b2-256f58fb1cda" absoluteBounds="3.515, 20.835, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="71ba88eb-00fd-4ef0-a992-e0ee5369268f" absoluteBounds="6.25, 27.25, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/StudioCommercialeDataClassesDataContext/SOCI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="22636b97-4160-45b3-a2e8-34a34f34ac09" absoluteBounds="6.265, 27.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1f52b4bb-31d0-4ad1-bc86-45fb198ae4f7" absoluteBounds="0.75, 11.875, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/StudioCommercialeDataClassesDataContext/REGIMI_CONTABILE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d10ed1dc-02e6-4c6f-b78a-71a613575c7d" absoluteBounds="0.765, 12.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d66a9acb-1798-4e86-946a-02b601115156" absoluteBounds="6.25, 21.125, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/StudioCommercialeDataClassesDataContext/SOCIETA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="da75a627-e466-47ef-996a-a7b5583ff3c2" absoluteBounds="6.265, 21.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="900b1ca0-6542-42af-9749-937fcc14fe0d" absoluteBounds="12.25, 17.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/StudioCommercialeDataClassesDataContext/TERRENI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0d7e6913-6106-468a-b371-51feafb98046" absoluteBounds="12.265, 18.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f947ad33-c852-412b-97c5-4ebf24ed3776" absoluteBounds="9.5, 30.375, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/StudioCommercialeDataClassesDataContext/TIPI_FABBRICATI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="786f12d0-f82c-49a1-85d0-edd35b2616d4" absoluteBounds="9.515, 30.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="641a6728-e910-4ae4-ba83-56c6c52e5c38" absoluteBounds="9.5, 28.375, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/StudioCommercialeDataClassesDataContext/TIPI_TERRENI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a5b46cb7-68bb-44dd-ae01-1dd1ab9f855f" absoluteBounds="9.515, 28.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="877afbf2-66d8-4674-b2dc-eccbf3375346" absoluteBounds="3.5, 18, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/StudioCommercialeDataClassesDataContext/TITOLARI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9234bb98-58c2-45fb-8f58-5ffb831f43f4" absoluteBounds="3.515, 18.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2be9bfc4-3d30-43b0-aaa2-d348f9862988" absoluteBounds="6.25, 23.625, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/StudioCommercialeDataClassesDataContext/UNITA_LOCALI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e86f39ad-929c-41e2-bb94-4ff98950b077" absoluteBounds="6.265, 24.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.75 : 10.7901025390625); (1.75 : 11.625); (3.04166666666667 : 11.625 : JumpStart); (3.20833333333333 : 11.625 : JumpEnd); (3.25 : 11.625); (3.25 : 20.125); (5.72820412820513 : 20.125 : JumpStart); (6.27083333333333 : 20.125 : JumpEnd); (7.16666666666667 : 20.125 : JumpStart); (7.33333333333333 : 20.125 : JumpEnd); (8.625 : 20.125); (8.625 : 21.9142976888021); (8.72916666666667 : 21.9142976888021 : JumpStart); (8.89583333333333 : 21.9142976888021 : JumpEnd); (9 : 21.9142976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StudioCommercialeDataClassesDataContext/CLIENTI/CLIENTI_AMMINISTRATORI" />
+      <nodes>
+        <classShapeMoniker Id="0d4ca4b3-a06f-42e3-b987-22bd44069a2b" />
+        <classShapeMoniker Id="158d1ea4-229f-4215-8865-c10ff0e71dcf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 9.73484537760417); (5.79166666666667 : 9.73484537760416 : JumpStart); (6.11458333333333 : 9.73484537760417 : JumpEnd); (8.32291666666667 : 9.73484537760417 : JumpStart); (8.48958333333333 : 9.73484537760417 : JumpEnd); (9.25 : 9.73484537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StudioCommercialeDataClassesDataContext/CLIENTI/CLIENTI_CLIENTI_SEGUITI" />
+      <nodes>
+        <classShapeMoniker Id="0d4ca4b3-a06f-42e3-b987-22bd44069a2b" />
+        <classShapeMoniker Id="07b29bc8-c452-4b65-b6b0-36287b8c7821" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 8.25); (1.75 : 5.91429768880208); (3.5 : 5.91429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StudioCommercialeDataClassesDataContext/CLIENTI/CLIENTI_DELEGHE_ANNUE_CLIENTI" />
+      <nodes>
+        <classShapeMoniker Id="0d4ca4b3-a06f-42e3-b987-22bd44069a2b" />
+        <classShapeMoniker Id="2b5ac2ae-cff0-482d-b16c-4622a92438ca" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 8.91429768880208); (9.25 : 8.91429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StudioCommercialeDataClassesDataContext/DIPENDENTI_STUDIO/DIPENDENTI_STUDIO_CLIENTI_SEGUITI" />
+      <nodes>
+        <classShapeMoniker Id="cc26bed2-22df-462a-9abd-43c03fd7b47e" />
+        <classShapeMoniker Id="07b29bc8-c452-4b65-b6b0-36287b8c7821" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 15.7925439453125); (5.88541666666667 : 15.7925439453125 : JumpStart); (6.05208333333333 : 15.7925439453125 : JumpEnd); (9.25 : 15.7925439453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StudioCommercialeDataClassesDataContext/IMPRESE/IMPRESE_DATI_PIATTAFORMA_IMPRESE" />
+      <nodes>
+        <classShapeMoniker Id="1d89c745-8353-4b7d-841a-14f2c080d9a2" />
+        <classShapeMoniker Id="0a685097-3cce-4f60-89a0-0477b14d9523" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 16.7460034179688); (5.88541666666667 : 16.7460034179688 : JumpStart); (6.05208333333333 : 16.7460034179688 : JumpEnd); (6.25 : 16.7460034179688)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StudioCommercialeDataClassesDataContext/IMPRESE/IMPRESE_DELEGHE_ANNUE_IMPRESE" />
+      <nodes>
+        <classShapeMoniker Id="1d89c745-8353-4b7d-841a-14f2c080d9a2" />
+        <classShapeMoniker Id="55c7dd1d-0265-4b86-87ba-a6732471cfa6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 14.5969962565104); (5.94791666666667 : 14.5969962565104 : JumpStart); (6.11458333333333 : 14.5969962565104 : JumpEnd); (6.25 : 14.5969962565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StudioCommercialeDataClassesDataContext/IMPRESE/IMPRESE_DIRIGENZA_DITTE" />
+      <nodes>
+        <classShapeMoniker Id="1d89c745-8353-4b7d-841a-14f2c080d9a2" />
+        <classShapeMoniker Id="7074d6a6-64bd-46ce-86d1-664c8a8704dd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.40625 : 9.32859537760417); (8.40625 : 12.7973453776042); (9.25 : 12.7973453776042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StudioCommercialeDataClassesDataContext/DIPENDENTI_STUDIO/DIPENDENTI_STUDIO_IMPRESE_SEGUITE" />
+      <nodes>
+        <classShapeMoniker Id="cc26bed2-22df-462a-9abd-43c03fd7b47e" />
+        <classShapeMoniker Id="6103b66b-ec7e-4ebb-8240-7293da0d52a5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 14); (5.875 : 13.625); (5.875 : 13.0942223776042); (5.94791666666667 : 13.0942223776042 : JumpStart); (6.11458333333333 : 13.0942223776042 : JumpEnd); (9.25 : 13.0942223776042)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StudioCommercialeDataClassesDataContext/IMPRESE/IMPRESE_IMPRESE_SEGUITE" />
+      <nodes>
+        <classShapeMoniker Id="1d89c745-8353-4b7d-841a-14f2c080d9a2" />
+        <classShapeMoniker Id="6103b66b-ec7e-4ebb-8240-7293da0d52a5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 11.4142976888021); (5.94791666666667 : 11.4142976888021 : JumpStart); (6.11458333333333 : 11.4142976888021 : JumpEnd); (6.25 : 11.4142976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StudioCommercialeDataClassesDataContext/LIBERI_PROFESSIONISTI/LIBERI_PROFESSIONISTI_DATI_PIATTAFORMA_LIB_PROF" />
+      <nodes>
+        <classShapeMoniker Id="5ebc9660-e373-4120-9e32-09fefb682025" />
+        <classShapeMoniker Id="77bc65ff-cb65-4455-ba60-d3c05e11ada5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 10.5200512695312); (3.5 : 10.5200512695312)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StudioCommercialeDataClassesDataContext/CLIENTI/CLIENTI_LIBERI_PROFESSIONISTI" />
+      <nodes>
+        <classShapeMoniker Id="0d4ca4b3-a06f-42e3-b987-22bd44069a2b" />
+        <classShapeMoniker Id="5ebc9660-e373-4120-9e32-09fefb682025" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.48381883638822 : 9.00169108072917); (6.03125 : 9.54912224434095); (6.03125 : 15.4932657291667); (9.25 : 15.4932657291667)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StudioCommercialeDataClassesDataContext/PIATTAFORME/PIATTAFORME_DATI_PIATTAFORMA_IMPRESE" />
+      <nodes>
+        <classShapeMoniker Id="6aa86cb4-ed89-41bf-9871-9ee18ec2093f" />
+        <classShapeMoniker Id="0a685097-3cce-4f60-89a0-0477b14d9523" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 8.98473838551683); (5.875 : 9.35973838551683); (5.875 : 10.988396844401); (5.94791666666667 : 10.988396844401 : JumpStart); (6.11458333333333 : 10.988396844401 : JumpEnd); (6.25 : 10.988396844401)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StudioCommercialeDataClassesDataContext/PIATTAFORME/PIATTAFORME_DATI_PIATTAFORMA_LIB_PROF" />
+      <nodes>
+        <classShapeMoniker Id="6aa86cb4-ed89-41bf-9871-9ee18ec2093f" />
+        <classShapeMoniker Id="77bc65ff-cb65-4455-ba60-d3c05e11ada5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 23.2252018229167); (5.79166666666667 : 23.2252018229167 : JumpStart); (5.95833333333333 : 23.2252018229167 : JumpEnd); (8.72916666666667 : 23.2252018229167 : JumpStart); (8.89583333333333 : 23.2252018229167 : JumpEnd); (11.1979166666667 : 23.2252018229167 : JumpStart); (11.3645833333333 : 23.2252018229167 : JumpEnd); (12.6354141666667 : 23.2252018229167 : JumpStart); (12.8020808333333 : 23.2252018229167 : JumpEnd); (13.25 : 23.2252018229167); (13.25 : 22.7035953776042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StudioCommercialeDataClassesDataContext/PROPRIETA/PROPRIETA_FABBRICATI" />
+      <nodes>
+        <classShapeMoniker Id="1e58390c-c15c-40c2-8bc1-d6d66870b071" />
+        <classShapeMoniker Id="7c07da16-3295-489b-be85-b2ec4832ea7f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 10.7901025390625); (3.1875 : 11.2276025390625); (3.1875 : 21.9335034179688); (3.5 : 21.9335034179688)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StudioCommercialeDataClassesDataContext/CLIENTI/CLIENTI_PROPRIETA" />
+      <nodes>
+        <classShapeMoniker Id="0d4ca4b3-a06f-42e3-b987-22bd44069a2b" />
+        <classShapeMoniker Id="1e58390c-c15c-40c2-8bc1-d6d66870b071" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 27.3118490375601); (8.8125 : 26.7493490375601); (8.8125 : 18.9142976888021); (9 : 18.9142976888021)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StudioCommercialeDataClassesDataContext/SOCI/SOCI_ASSOCIAZIONE_SOCI" />
+      <nodes>
+        <classShapeMoniker Id="71ba88eb-00fd-4ef0-a992-e0ee5369268f" />
+        <classShapeMoniker Id="68303cd9-84c0-41a1-9b84-8653ef6ffccf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.70076923076923 : 10.7901025390625); (3.125 : 11.2143333082933); (3.125 : 27.9431469726563); (6.25 : 27.9431469726563)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StudioCommercialeDataClassesDataContext/CLIENTI/CLIENTI_SOCI" />
+      <nodes>
+        <classShapeMoniker Id="0d4ca4b3-a06f-42e3-b987-22bd44069a2b" />
+        <classShapeMoniker Id="71ba88eb-00fd-4ef0-a992-e0ee5369268f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 13.0689925130208); (1.75 : 15.5585034179688); (3.04166666666667 : 15.5585034179687 : JumpStart); (3.42708333333333 : 15.5585034179688 : JumpEnd); (3.5 : 15.5585034179688)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StudioCommercialeDataClassesDataContext/REGIMI_CONTABILE/REGIMI_CONTABILE_IMPRESE" />
+      <nodes>
+        <classShapeMoniker Id="1f52b4bb-31d0-4ad1-bc86-45fb198ae4f7" />
+        <classShapeMoniker Id="1d89c745-8353-4b7d-841a-14f2c080d9a2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 12.2364005533854); (3.04166666666667 : 12.2364005533854 : JumpStart); (3.42708333333333 : 12.2364005533854 : JumpEnd); (3.5 : 12.2364005533854)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StudioCommercialeDataClassesDataContext/REGIMI_CONTABILE/REGIMI_CONTABILE_LIBERI_PROFESSIONISTI" />
+      <nodes>
+        <classShapeMoniker Id="1f52b4bb-31d0-4ad1-bc86-45fb198ae4f7" />
+        <classShapeMoniker Id="5ebc9660-e373-4120-9e32-09fefb682025" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 21.457148844401); (8.54166666666667 : 21.457148844401 : JumpStart); (8.70833333333333 : 21.457148844401 : JumpEnd); (8.72916666666667 : 21.457148844401 : JumpStart); (8.89583333333333 : 21.457148844401 : JumpEnd); (9 : 21.457148844401)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StudioCommercialeDataClassesDataContext/SOCIETA/SOCIETA_AMMINISTRATORI" />
+      <nodes>
+        <classShapeMoniker Id="d66a9acb-1798-4e86-946a-02b601115156" />
+        <classShapeMoniker Id="158d1ea4-229f-4215-8865-c10ff0e71dcf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.25 : 21.125); (7.25 : 19.3401990332031); (8.72916666666667 : 19.3401990332031 : JumpStart); (8.89583333333333 : 19.3401990332031 : JumpEnd); (9 : 19.3401990332031)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StudioCommercialeDataClassesDataContext/SOCIETA/SOCIETA_ASSOCIAZIONE_SOCI" />
+      <nodes>
+        <classShapeMoniker Id="d66a9acb-1798-4e86-946a-02b601115156" />
+        <classShapeMoniker Id="68303cd9-84c0-41a1-9b84-8653ef6ffccf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 22.8958968098958); (8.625 : 23.2708968098958); (8.625 : 26.6354484049479); (8.72916666666667 : 26.6354484049479 : JumpStart); (8.89583333333333 : 26.6354484049479 : JumpEnd); (9 : 26.6354484049479)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StudioCommercialeDataClassesDataContext/SOCIETA/SOCIETA_BILANCI" />
+      <nodes>
+        <classShapeMoniker Id="d66a9acb-1798-4e86-946a-02b601115156" />
+        <classShapeMoniker Id="667cdec3-8a20-4205-9cab-f2e0cea82395" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 17.0508519897837); (6.03125 : 17.5821019897837); (6.03125 : 22.0104484049479); (6.25 : 22.0104484049479)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StudioCommercialeDataClassesDataContext/IMPRESE/IMPRESE_SOCIETA" />
+      <nodes>
+        <classShapeMoniker Id="1d89c745-8353-4b7d-841a-14f2c080d9a2" />
+        <classShapeMoniker Id="d66a9acb-1798-4e86-946a-02b601115156" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 20.4365374615385); (5.81607443490112 : 20.1204630266373 : JumpStart); (5.93392556509888 : 20.0026118964396 : JumpEnd); (5.97232443490112 : 19.9642130266373 : JumpStart); (6.09017556509888 : 19.8463618964396 : JumpEnd); (6.1875 : 19.7490374615385); (6.1875 : 20.4054996744792); (7.16666666666667 : 20.4054996744792 : JumpStart); (7.33333333333333 : 20.4054996744792 : JumpEnd); (8.54166666666667 : 20.4054996744792 : JumpStart); (8.70833333333333 : 20.4054996744792 : JumpEnd); (8.72916666666667 : 20.4054996744792 : JumpStart); (8.89583333333333 : 20.4054996744792 : JumpEnd); (11.1979166666667 : 20.4054996744792 : JumpStart); (11.3645833333333 : 20.4054996744792 : JumpEnd); (11.875 : 20.4054996744792); (12.25 : 20.0304996744792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/StudioCommercialeDataClassesDataContext/PROPRIETA/PROPRIETA_TERRENI" />
+      <nodes>
+        <classShapeMoniker Id="1e58390c-c15c-40c2-8bc1-d6d66870b071" />
+        <classShapeMoniker Id="900b1ca0-6542-42af-9749-937fcc14fe0d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 30.9719962565104); (12.7187475 : 30.9719962565104); (12.7187475 : 22.7035953776042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StudioCommercialeDataClassesDataContext/TIPI_FABBRICATI/TIPI_FABBRICATI_FABBRICATI" />
+      <nodes>
+        <classShapeMoniker Id="f947ad33-c852-412b-97c5-4ebf24ed3776" />
+        <classShapeMoniker Id="7c07da16-3295-489b-be85-b2ec4832ea7f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.28125 : 28.375); (11.28125 : 19.8670450260417); (12.25 : 19.8670450260417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StudioCommercialeDataClassesDataContext/TIPI_TERRENI/TIPI_TERRENI_TERRENI" />
+      <nodes>
+        <classShapeMoniker Id="641a6728-e910-4ae4-ba83-56c6c52e5c38" />
+        <classShapeMoniker Id="900b1ca0-6542-42af-9749-937fcc14fe0d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 18.0312264964944); (5.81607443490112 : 17.7151520615933 : JumpStart); (5.93392556509888 : 17.5973009313955 : JumpEnd); (5.96875 : 17.5624764964944); (5.96875 : 15.4752425130208); (6.25 : 15.1939925130208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/StudioCommercialeDataClassesDataContext/TITOLARI/TITOLARI_DIRIGENZA_DITTE" />
+      <nodes>
+        <classShapeMoniker Id="877afbf2-66d8-4674-b2dc-eccbf3375346" />
+        <classShapeMoniker Id="7074d6a6-64bd-46ce-86d1-664c8a8704dd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 10.7101015390625); (3.34375 : 11.3038515390625); (3.34375 : 18.5969962565104); (3.5 : 18.5969962565104)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StudioCommercialeDataClassesDataContext/CLIENTI/CLIENTI_TITOLARI" />
+      <nodes>
+        <classShapeMoniker Id="0d4ca4b3-a06f-42e3-b987-22bd44069a2b" />
+        <classShapeMoniker Id="877afbf2-66d8-4674-b2dc-eccbf3375346" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.46769230769231 : 17.1170068359375); (5.875 : 17.5243145282452); (5.875 : 24.6065991210938); (6.25 : 24.6065991210938)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StudioCommercialeDataClassesDataContext/IMPRESE/IMPRESE_UNITA_LOCALI" />
+      <nodes>
+        <classShapeMoniker Id="1d89c745-8353-4b7d-841a-14f2c080d9a2" />
+        <classShapeMoniker Id="2be9bfc4-3d30-43b0-aaa2-d348f9862988" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DB" Class="DBDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=MARTA;Initial Catalog=DB;Integrated Security=True" SettingsObjectName="DBproject.Properties.Settings" SettingsPropertyName="DBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AMMINISTRATORI_SOCIETA" Member="AMMINISTRATORI_SOCIETAs">
+    <Type Name="AMMINISTRATORI_SOCIETA">
+      <Column Name="codice_fiscale_impresa" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="data_inizio_incarico" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="cod_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="data_fine_incarico" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="CLIENTI_AMMINISTRATORI_SOCIETA" Member="CLIENTI" ThisKey="cod_cliente" OtherKey="cod_cliente" Type="CLIENTI" IsForeignKey="true" />
+      <Association Name="SOCIETA_AMMINISTRATORI_SOCIETA" Member="SOCIETA" ThisKey="codice_fiscale_impresa" OtherKey="codice_fiscale_impresa" Type="SOCIETA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ASSOCIAZIONI_SOCI" Member="ASSOCIAZIONI_SOCIs">
+    <Type Name="ASSOCIAZIONI_SOCI">
+      <Column Name="cod_cliente" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="quota" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="precentuale" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="codice_fiscale_impresa" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="SOCI_ASSOCIAZIONI_SOCI" Member="SOCI" ThisKey="cod_cliente" OtherKey="cod_cliente" Type="SOCI" IsForeignKey="true" />
+      <Association Name="SOCIETA_ASSOCIAZIONI_SOCI" Member="SOCIETA" ThisKey="codice_fiscale_impresa" OtherKey="codice_fiscale_impresa" Type="SOCIETA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BILANCI" Member="BILANCIs">
+    <Type Name="BILANCI">
+      <Column Name="data_approvazione" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="cod_bilancio" Type="System.String" DbType="VarChar(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codice_fiscale_impresa" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="data_chiusura" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="periodicità" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="SOCIETA_BILANCI" Member="SOCIETA" ThisKey="codice_fiscale_impresa" OtherKey="codice_fiscale_impresa" Type="SOCIETA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CLIENTI" Member="CLIENTIs">
+    <Type Name="CLIENTI">
+      <Column Name="nome" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="cognome" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="nazionalita" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="cod_cliente" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="cod_fiscale" Type="System.String" DbType="Char(16) NOT NULL" CanBeNull="false" />
+      <Column Name="data_nascita" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="luogo_nascita" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="numero_telefono" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="domicilio_fiscale" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="CLIENTI_AMMINISTRATORI_SOCIETA" Member="AMMINISTRATORI_SOCIETAs" ThisKey="cod_cliente" OtherKey="cod_cliente" Type="AMMINISTRATORI_SOCIETA" />
+      <Association Name="CLIENTI_CLIENTI_SEGUITI" Member="CLIENTI_SEGUITIs" ThisKey="cod_cliente" OtherKey="cod_cliente" Type="CLIENTI_SEGUITI" />
+      <Association Name="CLIENTI_DELEGHE_ANNUE_CLIENTI" Member="DELEGHE_ANNUE_CLIENTIs" ThisKey="cod_cliente" OtherKey="cod_cliente" Type="DELEGHE_ANNUE_CLIENTI" />
+      <Association Name="CLIENTI_LIBERI_PROFESSIONISTI" Member="LIBERI_PROFESSIONISTI" ThisKey="cod_cliente" OtherKey="cod_cliente" Type="LIBERI_PROFESSIONISTI" Cardinality="One" />
+      <Association Name="CLIENTI_PROPRIETA" Member="PROPRIETAs" ThisKey="cod_cliente" OtherKey="cod_cliente" Type="PROPRIETA" />
+      <Association Name="CLIENTI_SOCI" Member="SOCI" ThisKey="cod_cliente" OtherKey="cod_cliente" Type="SOCI" Cardinality="One" />
+      <Association Name="CLIENTI_TITOLARI" Member="TITOLARI" ThisKey="cod_cliente" OtherKey="cod_cliente" Type="TITOLARI" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CLIENTI_SEGUITI" Member="CLIENTI_SEGUITIs">
+    <Type Name="CLIENTI_SEGUITI">
+      <Column Name="cod_cliente" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="data_inizio_gestione" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="data_fine_gestione" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="cod_dipendente" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Association Name="CLIENTI_CLIENTI_SEGUITI" Member="CLIENTI" ThisKey="cod_cliente" OtherKey="cod_cliente" Type="CLIENTI" IsForeignKey="true" />
+      <Association Name="DIPENDENTI_STUDIO_CLIENTI_SEGUITI" Member="DIPENDENTI_STUDIO" ThisKey="cod_dipendente" OtherKey="cod_dipendente" Type="DIPENDENTI_STUDIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DATI_PIATTAFORMA" Member="DATI_PIATTAFORMAs">
+    <Type Name="DATI_PIATTAFORMA">
+      <Column Name="cod_piattaforma" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="DATI_PIATTAFORMA_DATI_PIATTAFORMA_IMPRESE" Member="DATI_PIATTAFORMA_IMPRESEs" ThisKey="cod_piattaforma" OtherKey="cod_piattaforma" Type="DATI_PIATTAFORMA_IMPRESE" />
+      <Association Name="DATI_PIATTAFORMA_DATI_PIATTAFORMA_LIB_PROF" Member="DATI_PIATTAFORMA_LIB_PROFs" ThisKey="cod_piattaforma" OtherKey="cod_piattaforma" Type="DATI_PIATTAFORMA_LIB_PROF" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DATI_PIATTAFORMA_IMPRESE" Member="DATI_PIATTAFORMA_IMPRESEs">
+    <Type Name="DATI_PIATTAFORMA_IMPRESE">
+      <Column Name="codice_fiscale_impresa" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nome_utente" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="cod_piattaforma" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Association Name="DATI_PIATTAFORMA_DATI_PIATTAFORMA_IMPRESE" Member="DATI_PIATTAFORMA" ThisKey="cod_piattaforma" OtherKey="cod_piattaforma" Type="DATI_PIATTAFORMA" IsForeignKey="true" />
+      <Association Name="IMPRESE_DATI_PIATTAFORMA_IMPRESE" Member="IMPRESE" ThisKey="codice_fiscale_impresa" OtherKey="codice_fiscale_impresa" Type="IMPRESE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DATI_PIATTAFORMA_LIB_PROF" Member="DATI_PIATTAFORMA_LIB_PROFs">
+    <Type Name="DATI_PIATTAFORMA_LIB_PROF">
+      <Column Name="cod_cliente" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nome_utente" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="cod_piattaforma" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Association Name="DATI_PIATTAFORMA_DATI_PIATTAFORMA_LIB_PROF" Member="DATI_PIATTAFORMA" ThisKey="cod_piattaforma" OtherKey="cod_piattaforma" Type="DATI_PIATTAFORMA" IsForeignKey="true" />
+      <Association Name="LIBERI_PROFESSIONISTI_DATI_PIATTAFORMA_LIB_PROF" Member="LIBERI_PROFESSIONISTI" ThisKey="cod_cliente" OtherKey="cod_cliente" Type="LIBERI_PROFESSIONISTI" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DELEGHE_ANNUE_CLIENTI" Member="DELEGHE_ANNUE_CLIENTIs">
+    <Type Name="DELEGHE_ANNUE_CLIENTI">
+      <Column Name="data_scadenza" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="tipologia_delega" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="anno_sottoscrizione" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="cod_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="CLIENTI_DELEGHE_ANNUE_CLIENTI" Member="CLIENTI" ThisKey="cod_cliente" OtherKey="cod_cliente" Type="CLIENTI" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DELEGHE_ANNUE_IMPRESE" Member="DELEGHE_ANNUE_IMPRESEs">
+    <Type Name="DELEGHE_ANNUE_IMPRESE">
+      <Column Name="codice_fiscale_impresa" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="data_scadenza" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="tipologia_delega" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="anno_sottoscrizione" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="IMPRESE_DELEGHE_ANNUE_IMPRESE" Member="IMPRESE" ThisKey="codice_fiscale_impresa" OtherKey="codice_fiscale_impresa" Type="IMPRESE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DIPENDENTI_STUDIO" Member="DIPENDENTI_STUDIOs">
+    <Type Name="DIPENDENTI_STUDIO">
+      <Column Name="nome" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="cognome" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="cod_dipendente" Type="System.String" DbType="VarChar(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="settore" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="DIPENDENTI_STUDIO_CLIENTI_SEGUITI" Member="CLIENTI_SEGUITIs" ThisKey="cod_dipendente" OtherKey="cod_dipendente" Type="CLIENTI_SEGUITI" />
+      <Association Name="DIPENDENTI_STUDIO_IMPRESE_SEGUITE" Member="IMPRESE_SEGUITEs" ThisKey="cod_dipendente" OtherKey="cod_dipendente" Type="IMPRESE_SEGUITE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DIRIGENZA_DITTE" Member="DIRIGENZA_DITTEs">
+    <Type Name="DIRIGENZA_DITTE">
+      <Column Name="codice_fiscale_impresa" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="cod_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="IMPRESE_DIRIGENZA_DITTE" Member="IMPRESE" ThisKey="codice_fiscale_impresa" OtherKey="codice_fiscale_impresa" Type="IMPRESE" IsForeignKey="true" />
+      <Association Name="TITOLARI_DIRIGENZA_DITTE" Member="TITOLARI" ThisKey="cod_cliente" OtherKey="cod_cliente" Type="TITOLARI" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FABBRICATI" Member="FABBRICATIs">
+    <Type Name="FABBRICATI">
+      <Column Name="cod_propietà" Type="System.String" DbType="VarChar(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="rendita_catastale" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="rendita_rivalutata" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="cod_tipologia_fabbricato" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Association Name="PROPRIETA_FABBRICATI" Member="PROPRIETA" ThisKey="cod_propietà" OtherKey="cod_propietà" Type="PROPRIETA" IsForeignKey="true" />
+      <Association Name="TIPI_FABBRICATI_FABBRICATI" Member="TIPI_FABBRICATI" ThisKey="cod_tipologia_fabbricato" OtherKey="cod_tipologia_fabbricato" Type="TIPI_FABBRICATI" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.IMPRESE" Member="IMPRESEs">
+    <Type Name="IMPRESE">
+      <Column Name="cod_attivita" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="sigla" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="nazionalita" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="sede" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="domicilio_fiscale" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="data_inizio_attivita" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="codice_fiscale_impresa" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="cod_identificativo" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="regime_contabile" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="metodo_gestione_fatturazione" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="periodicità_iva" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="metodo_conteggio" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="cod_tipologia_regime_contabile" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Association Name="IMPRESE_DATI_PIATTAFORMA_IMPRESE" Member="DATI_PIATTAFORMA_IMPRESE" ThisKey="codice_fiscale_impresa" OtherKey="codice_fiscale_impresa" Type="DATI_PIATTAFORMA_IMPRESE" Cardinality="One" />
+      <Association Name="IMPRESE_DELEGHE_ANNUE_IMPRESE" Member="DELEGHE_ANNUE_IMPRESEs" ThisKey="codice_fiscale_impresa" OtherKey="codice_fiscale_impresa" Type="DELEGHE_ANNUE_IMPRESE" />
+      <Association Name="IMPRESE_DIRIGENZA_DITTE" Member="DIRIGENZA_DITTE" ThisKey="codice_fiscale_impresa" OtherKey="codice_fiscale_impresa" Type="DIRIGENZA_DITTE" Cardinality="One" />
+      <Association Name="IMPRESE_IMPRESE_SEGUITE" Member="IMPRESE_SEGUITEs" ThisKey="codice_fiscale_impresa" OtherKey="codice_fiscale_impresa" Type="IMPRESE_SEGUITE" />
+      <Association Name="IMPRESE_SOCIETA" Member="SOCIETA" ThisKey="codice_fiscale_impresa" OtherKey="codice_fiscale_impresa" Type="SOCIETA" Cardinality="One" />
+      <Association Name="IMPRESE_UNITA_LOCALI" Member="UNITA_LOCALI" ThisKey="codice_fiscale_impresa" OtherKey="codice_fiscale_impresa" Type="UNITA_LOCALI" Cardinality="One" />
+      <Association Name="REGIME_CONTABILE_IMPRESE" Member="REGIME_CONTABILE1" ThisKey="cod_tipologia_regime_contabile" OtherKey="cod_tipologia_regime_contabile" Type="REGIME_CONTABILE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.IMPRESE_SEGUITE" Member="IMPRESE_SEGUITEs">
+    <Type Name="IMPRESE_SEGUITE">
+      <Column Name="cod_dipendente" Type="System.String" DbType="VarChar(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="data_inizio_gestione" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="data_fine_gestione" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="codice_fiscale_impresa" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="DIPENDENTI_STUDIO_IMPRESE_SEGUITE" Member="DIPENDENTI_STUDIO" ThisKey="cod_dipendente" OtherKey="cod_dipendente" Type="DIPENDENTI_STUDIO" IsForeignKey="true" />
+      <Association Name="IMPRESE_IMPRESE_SEGUITE" Member="IMPRESE" ThisKey="codice_fiscale_impresa" OtherKey="codice_fiscale_impresa" Type="IMPRESE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LIBERI_PROFESSIONISTI" Member="LIBERI_PROFESSIONISTIs">
+    <Type Name="LIBERI_PROFESSIONISTI">
+      <Column Name="cod_cliente" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="professione" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="tipologia_gestione_contribuzione" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="tipo_contribuzione" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="metodo_gestione_fatturazione" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="periodicita_iva" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="metodo_conteggio_iva" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="cod_tipologia_regime_contabile" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Association Name="LIBERI_PROFESSIONISTI_DATI_PIATTAFORMA_LIB_PROF" Member="DATI_PIATTAFORMA_LIB_PROF" ThisKey="cod_cliente" OtherKey="cod_cliente" Type="DATI_PIATTAFORMA_LIB_PROF" Cardinality="One" />
+      <Association Name="CLIENTI_LIBERI_PROFESSIONISTI" Member="CLIENTI" ThisKey="cod_cliente" OtherKey="cod_cliente" Type="CLIENTI" IsForeignKey="true" />
+      <Association Name="REGIME_CONTABILE_LIBERI_PROFESSIONISTI" Member="REGIME_CONTABILE" ThisKey="cod_tipologia_regime_contabile" OtherKey="cod_tipologia_regime_contabile" Type="REGIME_CONTABILE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PROPRIETA" Member="PROPRIETAs">
+    <Type Name="PROPRIETA">
+      <Column Name="via" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="civico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="comune" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="CAP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="valore_IMU" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="cod_propietà" Type="System.String" DbType="VarChar(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="sezione" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="foglio" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="particella" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="subalterno" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="classe" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="cod_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PROPRIETA_FABBRICATI" Member="FABBRICATI" ThisKey="cod_propietà" OtherKey="cod_propietà" Type="FABBRICATI" Cardinality="One" />
+      <Association Name="PROPRIETA_TERRENI" Member="TERRENI" ThisKey="cod_propietà" OtherKey="cod_propietà" Type="TERRENI" Cardinality="One" />
+      <Association Name="CLIENTI_PROPRIETA" Member="CLIENTI" ThisKey="cod_cliente" OtherKey="cod_cliente" Type="CLIENTI" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.REGIME_CONTABILE" Member="REGIME_CONTABILEs">
+    <Type Name="REGIME_CONTABILE">
+      <Column Name="descizione" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="cod_tipologia_regime_contabile" Type="System.String" DbType="VarChar(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="REGIME_CONTABILE_IMPRESE" Member="IMPRESEs" ThisKey="cod_tipologia_regime_contabile" OtherKey="cod_tipologia_regime_contabile" Type="IMPRESE" />
+      <Association Name="REGIME_CONTABILE_LIBERI_PROFESSIONISTI" Member="LIBERI_PROFESSIONISTIs" ThisKey="cod_tipologia_regime_contabile" OtherKey="cod_tipologia_regime_contabile" Type="LIBERI_PROFESSIONISTI" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SOCI" Member="SOCIs">
+    <Type Name="SOCI">
+      <Column Name="cod_cliente" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="data_affiliazione" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="tipologia_socio" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Association Name="SOCI_ASSOCIAZIONI_SOCI" Member="ASSOCIAZIONI_SOCI" ThisKey="cod_cliente" OtherKey="cod_cliente" Type="ASSOCIAZIONI_SOCI" Cardinality="One" />
+      <Association Name="CLIENTI_SOCI" Member="CLIENTI" ThisKey="cod_cliente" OtherKey="cod_cliente" Type="CLIENTI" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SOCIETA" Member="SOCIETAs">
+    <Type Name="SOCIETA">
+      <Column Name="codice_fiscale_impresa" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="sigla_tipologia" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="capitale_sociale" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="numero_reg_imprese" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="descrizione_tipologia" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="SOCIETA_AMMINISTRATORI_SOCIETA" Member="AMMINISTRATORI_SOCIETAs" ThisKey="codice_fiscale_impresa" OtherKey="codice_fiscale_impresa" Type="AMMINISTRATORI_SOCIETA" />
+      <Association Name="SOCIETA_ASSOCIAZIONI_SOCI" Member="ASSOCIAZIONI_SOCIs" ThisKey="codice_fiscale_impresa" OtherKey="codice_fiscale_impresa" Type="ASSOCIAZIONI_SOCI" />
+      <Association Name="SOCIETA_BILANCI" Member="BILANCIs" ThisKey="codice_fiscale_impresa" OtherKey="codice_fiscale_impresa" Type="BILANCI" />
+      <Association Name="IMPRESE_SOCIETA" Member="IMPRESE" ThisKey="codice_fiscale_impresa" OtherKey="codice_fiscale_impresa" Type="IMPRESE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TERRENI" Member="TERRENIs">
+    <Type Name="TERRENI">
+      <Column Name="cod_propietà" Type="System.String" DbType="VarChar(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="qualita" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="rendita_dominicale_catastale" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="rendita_dominicale_rivalutata" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="rendita_agraria_catastale" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="rendita_agraria_rivalutata" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="cod_tipologia_terreno" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Association Name="PROPRIETA_TERRENI" Member="PROPRIETA" ThisKey="cod_propietà" OtherKey="cod_propietà" Type="PROPRIETA" IsForeignKey="true" />
+      <Association Name="TIPI_TERRENI_TERRENI" Member="TIPI_TERRENI" ThisKey="cod_tipologia_terreno" OtherKey="cod_tipologia_terreno" Type="TIPI_TERRENI" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TIPI_FABBRICATI" Member="TIPI_FABBRICATIs">
+    <Type Name="TIPI_FABBRICATI">
+      <Column Name="tipologia_fabbricato" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="cod_tipologia_fabbricato" Type="System.String" DbType="VarChar(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="TIPI_FABBRICATI_FABBRICATI" Member="FABBRICATIs" ThisKey="cod_tipologia_fabbricato" OtherKey="cod_tipologia_fabbricato" Type="FABBRICATI" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TIPI_TERRENI" Member="TIPI_TERRENIs">
+    <Type Name="TIPI_TERRENI">
+      <Column Name="tipologia_terreno" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="cod_tipologia_terreno" Type="System.String" DbType="VarChar(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="TIPI_TERRENI_TERRENI" Member="TERRENIs" ThisKey="cod_tipologia_terreno" OtherKey="cod_tipologia_terreno" Type="TERRENI" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TITOLARI" Member="TITOLARIs">
+    <Type Name="TITOLARI">
+      <Column Name="cod_cliente" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="partita_iva" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Association Name="TITOLARI_DIRIGENZA_DITTE" Member="DIRIGENZA_DITTEs" ThisKey="cod_cliente" OtherKey="cod_cliente" Type="DIRIGENZA_DITTE" />
+      <Association Name="CLIENTI_TITOLARI" Member="CLIENTI" ThisKey="cod_cliente" OtherKey="cod_cliente" Type="CLIENTI" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UNITA_LOCALI" Member="UNITA_LOCALIs">
+    <Type Name="UNITA_LOCALI">
+      <Column Name="codice_fiscale_impresa" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="via" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="civico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="comune" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="CAP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="IMPRESE_UNITA_LOCALI" Member="IMPRESE" ThisKey="codice_fiscale_impresa" OtherKey="codice_fiscale_impresa" Type="IMPRESE" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
